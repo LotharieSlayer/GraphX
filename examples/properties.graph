@@ -1,0 +1,32 @@
+////////////lstPoint////////////
+1; create point 1
+2; create point 2
+////////////////////////////////
+1;Sommet d'origine
+2;
+3;
+4;
+5;
+6;
+7;
+8;
+9;
+10;
+////////////lstEdge////////////
+1,2,12;create an edge between 1 and 2 with a cost of 12
+2,1,-1;create an edge between 2 and 1 with a cost of -1
+///////////////////////////////
+links:
+1,2,5;j'ajoute je lien 1 vers 2 de poid 5
+2,1,4;
+1,3,7;
+4,1,3;
+5,2,3;
+4,3,3;
+8,7,3;
+6,1,3;
+2,9,3;
+4,10,3;
+9,8,3;
+7,8,3;
+10,3,3;
