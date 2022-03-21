@@ -1,0 +1,5 @@
+-encoding utf8
+-d bin
+
+./src/GraphX/Main.java
+./src/GraphX/utils/Lecture.java

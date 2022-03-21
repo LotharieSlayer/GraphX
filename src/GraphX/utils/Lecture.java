@@ -41,7 +41,7 @@ public class Lecture{
 		boolean continu = true;
 		String lig;
 		try {
-			Scanner sc = new Scanner(new FileInputStream("../../../examples/properties.graph"));
+			Scanner sc = new Scanner(new FileInputStream("../examples/properties.graph"));
 			sc.nextLine();
 			sc.nextLine();
 			sc.nextLine();
@@ -65,7 +65,7 @@ public class Lecture{
 		ArrayList<String[]> lstLiaison = new ArrayList<String[]>();
 		String lig;
 		try {
-			Scanner sc = new Scanner(new FileInputStream("../../../examples/properties.graph"));
+			Scanner sc = new Scanner(new FileInputStream("../examples/properties.graph"));
 			while(!sc.nextLine().equals("links:")){}
 			while(sc.hasNextLine()){
 				String[] tabS = new String[3];
