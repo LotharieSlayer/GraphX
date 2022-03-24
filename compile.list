@@ -3,3 +3,4 @@
 
 ./src/GraphX/Main.java
 ./src/GraphX/utils/Lecture.java
+./src/GraphX/utils/Chemin.java
