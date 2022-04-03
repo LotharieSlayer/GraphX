@@ -21,7 +21,7 @@ public class Chemin {
 		graphe = new int[arcs.size()][3];
 
 		for (int i = 0; i < arcs.size(); i++) {
-			for (int j = 0; j < 2; j++) {
+			for (int j = 0; j < 3; j++) {
 				graphe[i][j] = arcs.get(i)[j];
 			}
 		}
@@ -38,6 +38,9 @@ public class Chemin {
 			System.out.print("Choisissez votre algorithme ( 0 pour Bellman-Ford ou 1 pour Dijkstra ) : ");
 			algo = sc.nextInt();
 		} while ( algo != 0 && algo != 1 );
+
+		System.out.println(graphe[0][0]);
+
 
 		// Appel de l'algorithme choisi avec le sommet source choisi
 		switch( algo ) {
@@ -87,7 +90,7 @@ public class Chemin {
 		// ligne 1
 		affTab = "\n              |";
 		for ( int[] sommet: couts )
-			affTab += String.format( "%4s", (char)(sommet[0] + 65) ) + " |";
+			affTab += String.format( "%6s", (sommet[0]) + " |");
 		
 		// ligne 2 ( séparation )
 		affTab += "\n" + "-".repeat( 15 + 6 * couts.length ) + "\n";
@@ -195,7 +198,6 @@ public class Chemin {
 			ajouterLigneTableauAff();
 		}
 	}
-
 
 	/**
 	 * Fonction exécutant l'algorithme Bellman-ford.

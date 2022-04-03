@@ -1,6 +1,9 @@
 package GraphX.utils;
 
 import org.graphstream.graph.implementations.SingleGraph;
+
+import GraphX.Main;
+
 import org.graphstream.graph.Node;
 
 import java.io.FileInputStream;
@@ -12,8 +15,10 @@ public class Lecture{
 	private SingleGraph graph;
 	private String fichier;
 	private ArrayList<int[]> arcs = new ArrayList<>();
+	private Main instance;
 
-	public Lecture(String fichier){
+	public Lecture(String fichier, Main instance){
+		this.instance = instance;
 		this.fichier = fichier;
 		graph = new SingleGraph("Graphe utilisateur");
 		creerGraph();
@@ -34,6 +39,7 @@ public class Lecture{
 			n.setAttribute("ui.label",n.getId());
 		}
 		graph.display();
+		setLstArcsInt();
 	}
 
 	/**
@@ -103,8 +109,8 @@ public class Lecture{
 	 * Retourne une arraylist d'arcs mais sous forme d'entier primitifs
 	 * @return
 	 */
-	public ArrayList<int[]> getLstArcsInt(){
-		return this.arcs;
+	public void setLstArcsInt(){
+		instance.setLstArcsInt(arcs);
 	}
 
 }

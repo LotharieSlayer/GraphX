@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"GraphX.utils","l":"Chemin"},{"p":"GraphX.utils","l":"Lecture"}]
